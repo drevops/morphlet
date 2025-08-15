@@ -71,16 +71,46 @@ feature gaps, or client-specific needs.
 
 ## 6. Instructions Section
 
-The `## 🧰 Instructions` section defines one or more executable steps. Each step
-must contain:
+The `## 🧰 Instructions` section defines one or more executable steps to be
+applied to the codebase.
 
-- A title heading (`### N. Step Name`)
-- A list of:
-  - `Target File`: relative path
-  - `Operation`: one of `insert`, `replace`, `create`, `delete`, `rename`,
-    `move`
-  - `Target Location`: line number, selector, or marker comment
-- A code block with the transformation content
+Each step MUST contain:
+
+- A level-3 heading in the format `### Operation: Step Description`, where:
+  - `Operation` is one of the supported operation keywords listed below.
+  - `Step Description` is a short, human-readable summary of the intent.
+
+- A bullet-point list of key-value fields:
+  - `operation:` (**required**) One of the supported operations listed
+    below.
+  - `file:` (**optional**) Relative path to the file this step modifies. Omit if
+    step applies globally.
+  - `conditions:` (**optional**) One or more conditions required for this
+    step to execute. If conditions are not met, the step MUST be skipped.
+
+- A content block (e.g., code block or configuration snippet) representing the
+  new, modified, or resulting content associated with the step. It may include
+  code, configuration, documentation, or other materials relevant to the
+  specified operation.
+
+### Supported Operations
+
+| Operation | Description                                                                  |
+|-----------|------------------------------------------------------------------------------|
+| `create`  | Create a new file with the given content.                                    |
+| `delete`  | Remove content or entire files.                                              |
+| `insert`  | Add new content at a specific point in the file.                             |
+| `morph`   | Context-aware transformation that preserves existing content where possible. |
+| `move`    | Move content or files from one location to another.                          |
+| `patch`   | Apply a structured or unified diff (e.g., external patch file).              |
+| `rename`  | Rename a file or identifier.                                                 |
+| `replace` | Replace existing content at a known location or pattern.                     |
+
+Each step MUST specify only **one** operation from this list. Composite
+transformations must be broken down into multiple steps.
+
+Specification implementors MUST ensure that operations are executed as per the
+description above to the best of their ability.
 
 ## 7. Verification Section
 

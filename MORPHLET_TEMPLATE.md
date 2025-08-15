@@ -41,14 +41,14 @@
 > 🚧 This is the actionable part of the Morphlet.
 > 🚧 Break it down into atomic steps the agent or human can follow.
 
-### 1. [🚧 Action Title or Step Name]
+### [🚧 Insert | Replace | Create | Delete | Rename | Move | Patch | Morph]: [🚧 Short description of what this step does]
 
-- Target File: `[🚧 relative/path/to/file.ext]`
-- Operation: `[🚧 insert | replace | create | delete | rename | move]`
-- Target Location: `[🚧 line, selector, marker comment, etc.]`
+- operation: [🚧 insert | replace | create | delete | rename | move | patch | morph]
+- file: [🚧 relative/path/to/file.ext]
+- conditions: [🚧 optional condition for when this step should run]
 
 ```markdown
-[🚧 Insert your code block or file content here as a placeholder]
+[🚧 Insert the code or content to be inserted/replaced/etc.]
 ```
 
 _Add more steps as needed..._
