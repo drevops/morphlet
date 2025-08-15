@@ -1,0 +1,35 @@
+{
+  "name": "morphlet-tests",
+  "version": "1.0.0",
+  "description": "Test harness for Morphlet application validation",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "test:coverage": "jest --coverage",
+    "test:verbose": "jest --verbose",
+    "lint": "prettier --check *.js && eslint *.js",
+    "lint-fix": "prettier --write *.js && eslint *.js --fix"
+  },
+  "keywords": [
+    "morphlet",
+    "testing",
+    "jest",
+    "ai",
+    "claude"
+  ],
+  "author": "Alex Skrypnyk (alex@drevops.com)",
+  "license": "GPL-2.0-or-later",
+  "devDependencies": {
+    "jest": "^29.7.0",
+    "eslint": "^8.57.0",
+    "prettier": "^3.0.0",
+    "lint-staged": "^15.2.0",
+    "husky": "^8.0.3"
+  },
+  "lint-staged": {
+    "*.js": [
+      "npm run lint-fix"
+    ]
+  }
+}

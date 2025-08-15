@@ -66,7 +66,22 @@ instructions for using morphlets with AI agents.
 We automatically test the template and instructions with AI agents to make
 sure that the instructions are clear and actionable.
 
-## How to use
+## Features
+
+- AI-readable and human-auditable specifications for code changes
+- Structured, declarative format using Markdown
+- Version-aware and context-aware transformations
+- Reusable morphlets that can be applied across different projects
+- Template-based creation and standardized application process
+- Built-in validation and verification steps
+
+## Installation
+
+1. Copy the [morphlet template](MORPHLET_TEMPLATE.md) to your project
+2. Copy [MORPHLET_CAPTURE.md](MORPHLET_CAPTURE.md) or [MORPHLET_APPLY.md](MORPHLET_APPLY.md) depending on your needs
+3. Use with your AI agent following the instructions in the copied files
+
+## Usage
 
 You can _create_ and _apply_ morphlets.
 
@@ -83,12 +98,16 @@ uncommitted files or for the last commit.
 ### Applying a morphlet
 
 1. Copy [MORPHLET_APPLY.md](MORPHLET_APPLY.md) file to your project.
-2. Prompt your AI agent: `Read MORPHLET_APPLY.md and use <your morphlet file>.`
+2. Prompt your AI agent: `Read the instructions in MORPHLET_APPLY.md and apply the changes described in <your morphlet file> to my codebase.`
 
 By default, the agent will apply the morphlet changes to the codebase. No code
 will be committed or pushed automatically.
 
-## Maintaining morphlets
+### Examples
+
+Head over to the [examples](examples/) directory to see some morphlets.
+
+## Maintenance
 
 Similar to how you maintain patches in your codebase, you can maintain
 morphlets in a dedicated directory in your project. We suggest creating a
@@ -101,9 +120,9 @@ The morphlet spec will be evolving over time, so you may need to update
 your morphlets to keep them compatible with the latest version of the morphlet
 spec. We will provide a migration guide for each morphlet version update.
 
-## Examples
+## License
 
-Head over to the [examples](examples/) directory to see some morphlets.
+MIT License - see LICENSE file for details.
 
 ---
 _This repository was created using the [Scaffold](https://getscaffold.dev/)

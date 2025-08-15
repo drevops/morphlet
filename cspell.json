@@ -4,6 +4,10 @@
     "words": [
         "Morphlet",
         "Morphlets",
-        "morphlet"
+        "morphlet",
+        "Skrypnyk"
+    ],
+    "ignorePaths": [
+        "node_modules"
     ]
 }

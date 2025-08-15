@@ -1,0 +1,40 @@
+# Dependencies
+node_modules/
+
+# Test coverage
+coverage/
+
+# Jest cache
+.jest/
+
+# Test logs and runs
+.logs/
+
+# Logs
+*.log
+npm-debug.log*
+
+# Runtime data
+pids
+*.pid
+*.seed
+*.pid.lock
+
+# Optional npm cache directory
+.npm
+
+# Optional eslint cache
+.eslintcache
+
+# Output of 'npm pack'
+*.tgz
+
+# Temporary folders
+.tmp/
+tmp/
+
+# macOS
+.DS_Store
+
+# Windows
+Thumbs.db
