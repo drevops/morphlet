@@ -122,7 +122,7 @@ spec. We will provide a migration guide for each morphlet version update.
 
 ## License
 
-MIT License - see LICENSE file for details.
+MIT License - see [LICENSE](LICENSE) file for details.
 
 ---
 _This repository was created using the [Scaffold](https://getscaffold.dev/)
